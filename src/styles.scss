@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  font-family: sans-serif;
+}
+
+.sidebar {
+  width: 10vw;
+  min-width: 100px;
+  height: 95vh;
+  padding: 10px;
+  background-color: lightgrey;
+
+  a {
+    text-decoration: none;
+    color: darkslateblue;
+    line-height: 26px;
+  }
+}
+
+.main-content {
+  padding: 30px;
+}
