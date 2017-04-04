@@ -1,143 +1,54 @@
 import React from 'react';
 
+const radius = 200, pointPI = (2 * Math.PI / 6);
+let i;
+
 class Hexagon extends React.Component {
   componentDidMount() {
     this.draw();
   }
+  
+  drawNegative(context, color) {
+    context.fillStyle = color;
 
-  draw() {
-    const context = this.refs.canvas.getContext('2d');
-    const center = 200, radius = 200, pointPI = (2 * Math.PI / 6);
-
-    /* filled hexagon */
-
-    context.fillStyle = 'olivedrab';
-    context.beginPath();
-    context.moveTo(center + radius*Math.cos(0), center + radius*Math.sin(0));
-    context.lineTo(
-      ( (center + radius*Math.cos(0)) + (center + radius*Math.cos(pointPI)) ) / 2
+    for (i = 0; i < 6; i++) {
+      context.beginPath();
+      context.moveTo(radius + radius*Math.cos(i * pointPI), radius + radius*Math.sin(i * pointPI));
+      context.lineTo(
+        ( (radius + radius*Math.cos(i * pointPI)) + (radius + radius*Math.cos((i+1) * pointPI)) ) / 2
         ,
-      ( (center + radius*Math.sin(0)) + (center + radius*Math.sin(pointPI)) ) / 2
+        ( (radius + radius*Math.sin(i * pointPI)) + (radius + radius*Math.sin((i+1) * pointPI)) ) / 2
       );
-    context.lineTo(center, center);
-    context.fill();
+      context.lineTo(radius, radius);
+      context.fill();
+    }
+  }
 
-    context.beginPath();
-    context.moveTo(center + radius*Math.cos(pointPI), center + radius*Math.sin(pointPI));
-    context.lineTo(
-      ( (center + radius*Math.cos(pointPI)) + (center + radius*Math.cos(2*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(pointPI)) + (center + radius*Math.sin(2*pointPI)) ) / 2
-    );
-    context.lineTo(center, center);
-    context.fill();
+  drawPositive(context, color) {
+    context.fillStyle = color;
 
-    context.beginPath();
-    context.moveTo(center + radius*Math.cos(2*pointPI), center + radius*Math.sin(2*pointPI));
-    context.lineTo(
-      ( (center + radius*Math.cos(2*pointPI)) + (center + radius*Math.cos(3*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(2*pointPI)) + (center + radius*Math.sin(3*pointPI)) ) / 2
-    );
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(center + radius*Math.cos(3*pointPI), center + radius*Math.sin(3*pointPI));
-    context.lineTo(
-      ( (center + radius*Math.cos(3*pointPI)) + (center + radius*Math.cos(4*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(3*pointPI)) + (center + radius*Math.sin(4*pointPI)) ) / 2
-    );
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(center + radius*Math.cos(4*pointPI), center + radius*Math.sin(4*pointPI));
-    context.lineTo(
-      ( (center + radius*Math.cos(4*pointPI)) + (center + radius*Math.cos(5*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(4*pointPI)) + (center + radius*Math.sin(5*pointPI)) ) / 2
-    );
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(center + radius*Math.cos(5*pointPI), center + radius*Math.sin(5*pointPI));
-    context.lineTo(
-      ( (center + radius*Math.cos(5*pointPI)) + (center + radius*Math.cos(6*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(5*pointPI)) + (center + radius*Math.sin(6*pointPI)) ) / 2
-    );
-    context.lineTo(center, center);
-    context.fill();
-
-
-    context.fillStyle = 'orange';
-    context.beginPath();
-    context.moveTo(
-      ( (center + radius*Math.cos(0)) + (center + radius*Math.cos(pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(0)) + (center + radius*Math.sin(pointPI)) ) / 2
-    );
-    context.lineTo(center + radius*Math.cos(pointPI), center + radius*Math.sin(pointPI));
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(
-      ( (center + radius*Math.cos(pointPI)) + (center + radius*Math.cos(2*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(pointPI)) + (center + radius*Math.sin(2*pointPI)) ) / 2
-    );
-    context.lineTo(center + radius*Math.cos(2*pointPI), center + radius*Math.sin(2*pointPI));
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(
-      ( (center + radius*Math.cos(2*pointPI)) + (center + radius*Math.cos(3*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(2*pointPI)) + (center + radius*Math.sin(3*pointPI)) ) / 2
-    );
-    context.lineTo(center + radius*Math.cos(3*pointPI), center + radius*Math.sin(3*pointPI));
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(
-      ( (center + radius*Math.cos(3*pointPI)) + (center + radius*Math.cos(4*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(3*pointPI)) + (center + radius*Math.sin(4*pointPI)) ) / 2
-    );
-    context.lineTo(center + radius*Math.cos(4*pointPI), center + radius*Math.sin(4*pointPI));
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(
-      ( (center + radius*Math.cos(4*pointPI)) + (center + radius*Math.cos(5*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(4*pointPI)) + (center + radius*Math.sin(5*pointPI)) ) / 2
-    );
-    context.lineTo(center + radius*Math.cos(5*pointPI), center + radius*Math.sin(5*pointPI));
-    context.lineTo(center, center);
-    context.fill();
-
-    context.beginPath();
-    context.moveTo(
-      ( (center + radius*Math.cos(5*pointPI)) + (center + radius*Math.cos(6*pointPI)) ) / 2
-      ,
-      ( (center + radius*Math.sin(5*pointPI)) + (center + radius*Math.sin(6*pointPI)) ) / 2
-    );
-    context.lineTo(center + radius*Math.cos(6*pointPI), center + radius*Math.sin(6*pointPI));
-    context.lineTo(center, center);
-    context.fill();
+    for (i = 0; i < 6; i++) {
+      context.beginPath();
+      context.moveTo(
+        ( (radius + radius*Math.cos(i * pointPI)) + (radius + radius*Math.cos((i+1) * pointPI)) ) / 2
+        ,
+        ( (radius + radius*Math.sin(i * pointPI)) + (radius + radius*Math.sin((i+1) * pointPI)) ) / 2
+      );
+      context.lineTo(radius + radius*Math.cos((i+1) * pointPI), radius + radius*Math.sin((i+1) * pointPI));
+      context.lineTo(radius, radius);
+      context.fill();
+    }
+  }
+  
+  draw() {
+    const context = document.getElementById('canvas').getContext('2d');
+    this.drawNegative(context, 'olivedrab');
+    this.drawPositive(context, 'orange');
   }
 
   render() {
     return (
-        <canvas ref="canvas" width={400} height={400} />
+        <canvas id="canvas" width={2*radius} height={2*radius} />
     )
   }
 }
