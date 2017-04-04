@@ -38,37 +38,6 @@ class Hexagon extends React.Component {
     this.drawPositive(context, 'orange');
   }
 
-  compute() {
-    /* hexagon width */
-    console.log('width',
-      Math.sqrt(
-        Math.pow(
-          (radius + radius * Math.cos(0)) - (radius + radius * Math.cos(3 * pointPI)),
-          2
-        )
-        +
-        Math.pow(
-          (radius + radius * Math.sin(0)) - (radius + radius * Math.sin(3 * pointPI)),
-          2
-        )
-      )
-    );
-    /* hexagon height */
-    console.log('height',
-      Math.sqrt(
-        Math.pow(
-          (radius + radius * Math.cos(2 * pointPI)) - (radius + radius * Math.cos(4 * pointPI)),
-          2
-        )
-        +
-        Math.pow(
-          (radius + radius * Math.sin(2 * pointPI)) - (radius + radius * Math.sin(4 * pointPI)),
-          2
-        )
-      )
-    );
-  }
-
   render() {
     return (
       <div>
