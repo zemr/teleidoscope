@@ -30,17 +30,18 @@ class Hexagon extends React.Component {
     img.src = "/static/media/pattern1.22a9dacc.png";
 
     img.onload = () => {
-      ctx.rotate(Math.PI);
-      ctx.drawImage(img, -100, 0);
-      ctx.rotate(Math.PI/-1);
-      ctx.drawImage(img, -100, 0);
-      ctx.rotate(Math.PI/3);
-      ctx.drawImage(img, -100, 0);
-      ctx.rotate(Math.PI/3);
-      ctx.drawImage(img, -100, 0);
-      ctx.rotate(Math.PI);
-      ctx.drawImage(img, -100, 0);
+      // start at three o'clock
       ctx.rotate(Math.PI/-3);
+      ctx.drawImage(img, -100, 0);
+      ctx.rotate(Math.PI/3);
+      ctx.drawImage(img, -100, 0);
+      ctx.rotate(Math.PI/3);
+      ctx.drawImage(img, -100, 0);
+      ctx.rotate(Math.PI/3);
+      ctx.drawImage(img, -100, 0);
+      ctx.rotate(Math.PI/3);
+      ctx.drawImage(img, -100, 0);
+      ctx.rotate(Math.PI/3);
       ctx.drawImage(img, -100, 0);
     };
 
