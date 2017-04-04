@@ -6,6 +6,8 @@ import Rectangle from './figures/rectangle';
 import Circle from './figures/circle';
 import Triangle from './figures/triangle';
 import Hexagon from './figures/hexagon';
+import Hexagon6p from './figures/hexagon-6p';
+import Hexagon12p from './figures/hexagon-12p';
 
 import './styles.css';
 
@@ -17,6 +19,8 @@ ReactDOM.render(
         <Route path="triangle" component={Triangle}/>
         <Route path="circle" component={Circle}/>
         <Route path="hexagon" component={Hexagon}/>
+        <Route path="hexagon-6p" component={Hexagon6p}/>
+        <Route path="hexagon-12p" component={Hexagon12p}/>
       </Route>
     </Router>
   ),
