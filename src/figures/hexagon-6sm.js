@@ -18,8 +18,10 @@ class Hexagon extends React.Component {
     img.src = file[source];
 
     img.onload = () => {
-      ctx.rotate(Math.PI/-3);
+      // start at five o'clock
+      ctx.rotate(0);
       ctx.drawImage(img, -halfRadius, 0);
+      // rotate by 60 deg (60*Math.PI/180)
       for (let i = 0; i < 5; i++) {
         ctx.rotate(Math.PI/3);
         ctx.drawImage(img, -halfRadius, 0);
