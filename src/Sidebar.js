@@ -41,7 +41,13 @@ const Sidebar = () => (
 
     <div>
       <Link to="/hexagon-6sm">
-        hexagon 6sm
+        hexagon 6s
+      </Link>
+    </div>
+
+    <div>
+      <Link to="/hexagon-6smm">
+        hexagon 6smm
       </Link>
     </div>
   </div>
