@@ -1,7 +1,7 @@
 import React from 'react';
-import image from '../patterns/pattern1.png';
-import image2 from '../patterns/pattern2.png';
-import image3 from '../patterns/pattern3.png';
+import image1 from '../patterns/test-pattern1.png';
+import image2 from '../patterns/test-pattern2.png';
+import image3 from '../patterns/test-pattern3.png';
 
 class Hexagon extends React.Component {
   componentDidMount() {
@@ -30,8 +30,9 @@ class Hexagon extends React.Component {
 
     ctx.translate(canvas.width / 2, canvas.height / 2);
 
+    const file = {image1};
     const img = new Image();
-    img.src = "/static/media/pattern1.22a9dacc.png";
+    img.src = file['image1'];
 
     img.onload = () => {
       // start at three o'clock
@@ -48,8 +49,6 @@ class Hexagon extends React.Component {
       ctx.rotate(Math.PI/3);
       ctx.drawImage(img, -100, 0);
     };
-
-    console.log('image', {image});
   }
 
   drawMultipleImages() {
@@ -58,13 +57,14 @@ class Hexagon extends React.Component {
 
     ctx.translate(canvas.width / 2, canvas.height / 2);
 
+    const file1 = {image1};
+    const file2 = {image2};
     const img1 = new Image();
     const img2 = new Image();
-    img1.src = "/static/media/pattern1.22a9dacc.png";
-    img2.src = "/static/media/pattern2.ec1e5c29.png";
+    img1.src = file1['image1'];
+    img2.src = file2['image2'];
 
     img2.onload = () => {
-      // start at three o'clock
       ctx.rotate(Math.PI/-3);
       ctx.drawImage(img1, -100, 0);
       ctx.rotate(Math.PI/3);
@@ -78,8 +78,6 @@ class Hexagon extends React.Component {
       ctx.rotate(Math.PI/3);
       ctx.drawImage(img2, -100, 0);
     };
-
-    console.log('image2', {image2});
   }
 
   drawMirrorImages() {
@@ -88,11 +86,11 @@ class Hexagon extends React.Component {
 
     ctx.translate(canvas.width / 2, canvas.height / 2);
 
+    const file = {image3};
     const img = new Image();
-    img.src = "/static/media/pattern3.d3a312ad.png";
+    img.src = file['image3'];
 
     img.onload = () => {
-      // start at three o'clock
       ctx.rotate(Math.PI/-3);
       ctx.drawImage(img, -100, 0);
       ctx.rotate(Math.PI/3);
@@ -115,10 +113,7 @@ class Hexagon extends React.Component {
       ctx.drawImage(img, -100, 0);
       ctx.restore();
     };
-
-    console.log('image3', {image3});
   }
-
 
   render() {
     return (

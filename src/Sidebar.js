@@ -32,6 +32,18 @@ const Sidebar = () => (
         hexagon 6M
       </Link>
     </div>
+
+    <div>
+      <Link to="/hexagon-6s">
+        hexagon 6s
+      </Link>
+    </div>
+
+    <div>
+      <Link to="/hexagon-6sm">
+        hexagon 6sm
+      </Link>
+    </div>
   </div>
 );
 
