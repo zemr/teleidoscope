@@ -2,6 +2,7 @@ import React from 'react';
 import pattern from '../patterns/test-pattern2.png';
 
 const radius = 200, height = 346, halfRadius = radius/2;
+let i;
 
 class Hexagon extends React.Component {
   componentDidMount() {
@@ -22,11 +23,21 @@ class Hexagon extends React.Component {
     imageObj.src = file['pattern'];
 
     imageObj.onload = () => {
-      context.rotate(0);
-      context.drawImage(imageObj, -halfRadius, 0);
-      for (let i = 0; i < 5; i++) {
-        context.rotate(Math.PI/3);
+      for (i = 0; i < 3; i++) {
+        context.rotate(Math.PI/1.5);
         context.drawImage(imageObj, -halfRadius, 0);
+      }
+      context.rotate(Math.PI/3);
+      context.save();
+      context.scale(-1, 1);
+      context.drawImage(imageObj, -halfRadius, 0);
+      context.restore();
+      for (i = 0; i < 2; i++) {
+        context.rotate(Math.PI/1.5);
+        context.save();
+        context.scale(-1, 1);
+        context.drawImage(imageObj, -halfRadius, 0);
+        context.restore();
       }
       context2.drawImage(canvas, 50, 50, 150, 130);
     };
