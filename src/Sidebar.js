@@ -41,7 +41,7 @@ const Sidebar = () => (
 
     <div>
       <Link to="/hexagon-6sm">
-        hexagon 6s
+        hexagon 6sm
       </Link>
     </div>
 
@@ -56,6 +56,12 @@ const Sidebar = () => (
         hexagon 6C
       </Link>
     </div>
+
+    <div>
+    <Link to="/hexagon-6CM">
+      hexagon 6CM
+    </Link>
+  </div>
   </div>
 );
 
