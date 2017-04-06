@@ -12,6 +12,7 @@ import Hexagon6sm from './figures/hexagon-6sm';
 import Hexagon6smm from './figures/hexagon-6smm';
 import Hexagon6C from './figures/hexagon-6C';
 import Hexagon6CM from './figures/hexagon-6CM';
+import Hexagon6F from './figures/hexagon-6F';
 
 import './styles.css';
 
@@ -29,6 +30,7 @@ ReactDOM.render(
         <Route path="hexagon-6smm" component={Hexagon6smm}/>
         <Route path="hexagon-6C" component={Hexagon6C}/>
         <Route path="hexagon-6CM" component={Hexagon6CM}/>
+        <Route path="hexagon-6F" component={Hexagon6F}/>
       </Route>
     </Router>
   ),
