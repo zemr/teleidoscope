@@ -27,9 +27,7 @@ class Hexagon extends React.Component {
 
       ctx.translate(radius, .5*height);
       ctx.rotate(Math.PI/1.5);
-      ctx.drawImage(img, -2*radius, -2.5*height);
       ctx.drawImage(img, -2*radius, -1.5*height);
-      ctx.drawImage(img, -.5*radius, -3*height);
       ctx.drawImage(img, -.5*radius, -2*height);
       ctx.drawImage(img, -.5*radius, -height);
       ctx.drawImage(img, -.5*radius, 0);
@@ -70,14 +68,11 @@ class Hexagon extends React.Component {
       ctx.scale(-1, 1);
       ctx.drawImage(img, -.5*radius, -height);
       ctx.drawImage(img, -.5*radius, 0);
-      ctx.drawImage(img, -2*radius, -2.5*height);
       ctx.drawImage(img, -2*radius, -1.5*height);
       ctx.drawImage(img, -2*radius, -.5*height);
       ctx.drawImage(img, -2*radius, .5*height);
-      ctx.drawImage(img, -3.5*radius, -2*height);
       ctx.drawImage(img, -3.5*radius, -height);
       ctx.drawImage(img, -3.5*radius, 0);
-      ctx.drawImage(img, -5*radius, -1.5*height);
       ctx.restore();
 
       ctx.rotate(Math.PI/1.5);
@@ -98,7 +93,7 @@ class Hexagon extends React.Component {
 
   render() {
     return (
-        <canvas id="canvas" width={5*radius} height={2.5*height} />
+        <canvas id="canvas" width={4.4*radius} height={2.5*height} />
     );
   }
 }
