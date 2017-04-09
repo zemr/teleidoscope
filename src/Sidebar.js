@@ -26,6 +26,12 @@ const Sidebar = () => (
         hexagon 6G
       </Link>
     </div>
+
+    <div>
+      <Link to="/scope">
+        scope
+      </Link>
+    </div>
   </div>
 );
 
