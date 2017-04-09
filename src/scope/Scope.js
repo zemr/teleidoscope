@@ -8,6 +8,10 @@ class Scope extends React.Component {
     this.drawLens();
   }
 
+  componentDidUpdate() {
+      this.drawCells();
+  }
+
   drawCells() {
     const ctx = document.getElementById('canvas').getContext('2d');
     const img = document.createElement('img');
@@ -15,6 +19,8 @@ class Scope extends React.Component {
     img.src = file['pattern'];
 
     img.onload = () => {
+
+      ctx.save();
 
       ctx.drawImage(img, .5*radius, .5*height);
       ctx.drawImage(img, .5*radius, 1.5*height);
@@ -29,7 +35,7 @@ class Scope extends React.Component {
       ctx.drawImage(img, -2*radius, -1.5*height);
       ctx.drawImage(img, -.5*radius, -2*height);
       ctx.drawImage(img, -.5*radius, -height);
-      ctx.drawImage(img, -.5*radius, 0); //<-
+      ctx.drawImage(img, -.5*radius, 0);
       ctx.drawImage(img, radius, -2.5*height);
       ctx.drawImage(img, radius, -1.5*height);
       ctx.drawImage(img, radius, -.5*height);
@@ -62,7 +68,7 @@ class Scope extends React.Component {
       ctx.save();
       ctx.scale(-1, 1);
       ctx.drawImage(img, -.5*radius, -height);
-      ctx.drawImage(img, -.5*radius, 0); //<-
+      ctx.drawImage(img, -.5*radius, 0);
       ctx.drawImage(img, -2*radius, -1.5*height);
       ctx.drawImage(img, -2*radius, -.5*height);
       ctx.drawImage(img, -2*radius, .5*height);
@@ -75,13 +81,14 @@ class Scope extends React.Component {
       ctx.scale(-1, 1);
       ctx.drawImage(img, -.5*radius, -2*height);
       ctx.drawImage(img, -.5*radius, -height);
-      ctx.drawImage(img, -.5*radius, 0); //<-
+      ctx.drawImage(img, -.5*radius, 0);
       ctx.drawImage(img, radius, -1.5*height);
       ctx.drawImage(img, radius, -.5*height);
       ctx.drawImage(img, 2.5*radius, -2*height);
       ctx.drawImage(img, 2.5*radius, -height);
       ctx.restore();
 
+      ctx.restore();
     };
   }
 
