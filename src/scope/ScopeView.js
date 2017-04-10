@@ -1,15 +1,13 @@
 import React from 'react';
 import Scope from './Scope';
 import ScopeButton from './ScopeButton';
-import pattern from '../patterns/pattern1a.png';
-
 
 class ScopeView extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      pattern: {pattern}
+      pattern: process.env.PUBLIC_URL + '/cells/cell_1_1.png'
     };
 
     this.changePattern = this.changePattern.bind(this);
@@ -24,7 +22,7 @@ class ScopeView extends React.Component {
       <div>
         <ScopeButton pattern={this.state.pattern} changePattern={this.changePattern} />
         <Scope pattern={this.state.pattern}/>
-        {console.log(this.state.pattern)};
+        {console.log(this.state.pattern)}
       </div>
     );
   }

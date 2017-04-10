@@ -15,8 +15,7 @@ class Scope extends React.Component {
   drawCells() {
     const ctx = document.getElementById('canvas').getContext('2d');
     const img = document.createElement('img');
-    const file = this.props.pattern;
-    img.src = file['pattern'];
+    img.src = this.props.pattern;
 
     img.onload = () => {
 
