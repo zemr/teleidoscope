@@ -29,6 +29,10 @@ class ScopeView extends React.Component {
     window.addEventListener('resize', this.updateWidth);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWidth);
+  }
+
   render() {
     return (
       <div>
