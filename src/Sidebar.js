@@ -32,6 +32,12 @@ const Sidebar = () => (
         scope
       </Link>
     </div>
+
+    <div>
+      <Link to="/pattern">
+        pattern
+      </Link>
+    </div>
   </div>
 );
 
