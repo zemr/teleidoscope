@@ -20,6 +20,7 @@ ReactDOM.render(
         <Route path="hexagon-6F" component={Hexagon6F}/>
         <Route path="hexagon-6G" component={Hexagon6G}/>
         <Route path="scope" component={ScopeView}/>
+        <Route path="scope/:patternId" component={ScopeView}/>
         <Route path="pattern" component={PatternView}/>
       </Route>
     </Router>
