@@ -126,8 +126,8 @@ class Scope extends React.Component {
   render() {
     return (
       <div style={{position: 'relative'}}>
-        <canvas id="canvas" width={5.2*radius} height={3*height} style={{position: 'absolute'}}/>
-        <canvas id="canvasG" width={5.2*radius} height={3*height} style={{position: 'absolute'}}/>
+        <canvas id="canvas" width={5.2*radius} height={3*height} style={{position: 'absolute'}} className={screen.height < 769 ? "canvas-scale" : null} />
+        <canvas id="canvasG" width={5.2*radius} height={3*height} style={{position: 'absolute'}} className={screen.height < 769 ? "canvas-scale" : null}/>
       </div>
     );
   }
