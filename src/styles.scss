@@ -34,3 +34,9 @@
   width: 520px;
   height: 520px;
 }
+
+@media (max-width: 992px) {
+  .pattern-container {
+    width: 220px;
+  }
+}
