@@ -1,6 +1,6 @@
 import React from 'react';
 
-const radius = 150, height = 260;
+const radius = 120, height = 208;
 let i;
 
 class ScopeMobile extends React.Component {
