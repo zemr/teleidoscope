@@ -26,7 +26,7 @@ class ScopeView extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.params.patternId && this.props.params.patternId !== '1') {
+    if (this.props.params.patternId) {
       this.setState({pattern: process.env.PUBLIC_URL + '/cells/cell_' + this.props.params.patternId +'_1.png'});
     }
     window.addEventListener('resize', this.updateWidth);
