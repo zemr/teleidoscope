@@ -12,7 +12,6 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={PatternView} />
-        <Route path="scope" component={ScopeView} />
         <Route path="scope/:patternId" component={ScopeView} />
       </Route>
     </Router>

@@ -11,7 +11,7 @@ class ScopeView extends React.Component {
     this.state = {
       screen: screen.width,
       window: window.innerWidth,
-      pattern: process.env.PUBLIC_URL + '/cells/cell_1_1.png'
+      pattern: ''
     };
 
     this.changePattern = this.changePattern.bind(this);
@@ -27,9 +27,7 @@ class ScopeView extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.params.patternId) {
-      this.setState({pattern: process.env.PUBLIC_URL + '/cells/cell_' + this.props.params.patternId +'_1.png'});
-    }
+    this.setState({pattern: process.env.PUBLIC_URL + '/cells/cell_' + this.props.params.patternId +'_1.png'});
     window.addEventListener('resize', this.updateWidth);
   }
 
