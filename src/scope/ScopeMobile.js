@@ -45,7 +45,7 @@ class ScopeMobile extends React.Component {
   drawLens() {
     const context = document.getElementById('canvasG').getContext('2d');
 
-    context.fillStyle = 'white';
+    context.fillStyle = '#404040';
     context.fillRect(0, 0, 2*radius, height);
     context.globalCompositeOperation = "destination-out";
     context.arc(radius, .5*height, .5*height, 0, 2*Math.PI);
@@ -54,9 +54,9 @@ class ScopeMobile extends React.Component {
 
   render() {
     return (
-      <div style={{position: 'relative'}}>
-        <canvas id="canvas" width={2*radius} height={height} style={{position: 'absolute'}}/>
-        <canvas id="canvasG" width={2*radius} height={height} style={{position: 'absolute'}}/>
+      <div className="scope-container">
+        <canvas id="canvas" width={2*radius} height={height} className="canvas" />
+        <canvas id="canvasG" width={2*radius} height={height} className="canvas" />
       </div>
     );
   }

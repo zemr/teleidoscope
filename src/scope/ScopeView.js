@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Scope from './Scope';
 import ScopeMobile from './ScopeMobile';
 import ScopeButton from './ScopeButton';
@@ -38,16 +39,16 @@ class ScopeView extends React.Component {
 
   render() {
     return (
-      <div>
-        <ScopeButton pattern={this.state.pattern} changePattern={this.changePattern} />
+      <div className="scopes-container">
         {
-          this.state.screen > 993 && this.state.window > 993
+          this.state.screen > 767 && this.state.window > 767
             ?
             <Scope pattern={this.state.pattern} />
             :
             <ScopeMobile pattern={this.state.pattern} />
         }
-        {console.log(this.state.pattern)}
+        <ScopeButton pattern={this.state.pattern} changePattern={this.changePattern} />
+        <Link to="/" className="patterns-link">patterns</Link>
       </div>
     );
   }

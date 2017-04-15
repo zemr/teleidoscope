@@ -1,34 +1,160 @@
-.container {
+@import url("https://fonts.googleapis.com/css?family=Schoolbell");
+
+html, body {
+  font-family: 'Schoolbell', sans-serif;
+  font-size: 20px;
+}
+
+.outer-container {
   display: flex;
-  font-family: sans-serif; }
+  justify-content: center;
+  width: 100%;
+}
 
-.sidebar {
-  width: 10vw;
-  min-width: 100px;
-  height: 95vh;
-  padding: 10px;
-  background-color: lightgrey; }
-  .sidebar a {
-    text-decoration: none;
-    color: darkslateblue;
-    line-height: 26px; }
+.inner-container {
+  background-color: #404040;
+}
 
-.main-content {
-  padding: 30px; }
+.header {
+  padding-top: 5px;
+  border-bottom: 2px solid #dfdfdf;
+  letter-spacing: .5em;
+}
 
-.pattern-container {
-  width: 660px; }
+.header-text {
+  padding-left: 15px;
+  background-color: #807477;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #938930), color-stop(.08, #938930), color-stop(.16, #b49131), color-stop(0.24, #ba852d), color-stop(0.40, #ac5d3e), color-stop(.50, #739131), color-stop(.56, #739131), color-stop(.64, #807477), color-stop(.8, #7c566a), color-stop(.88, #7c566a),color-stop(1, #b14040));
+  color: transparent;
+  -webkit-background-clip: text;
+}
 
-.pattern {
-  float: left;
-  margin: 10px; }
+.scope-container {
+  position: relative;
+}
 
-.canvas-scale {
-  width: 520px;
-  height: 520px; }
+.canvas {
+  position: absolute;
+}
 
-@media (max-width: 992px) {
-  .pattern-container {
-    width: 220px; } }
+.button-label {
+  color: #fff;
+  line-height: 1.4em;
+  cursor: pointer;
+}
 
-/*# sourceMappingURL=styles.css.map */
+.patterns-link {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  line-height: 2em;
+}
+
+@media (max-width: 767px) {
+  .inner-container {
+    width: 240px;
+  }
+
+  .header {
+    padding-bottom: 10px;
+  }
+
+  .patterns-container {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  .pattern {
+    margin-bottom: 5px;
+  }
+
+  .scopes-container {
+    padding: 10px 0;
+  }
+
+  .scope-container {
+    height: 208px;
+  }
+
+  .button-label {
+    margin-left: 20px;
+  }
+
+  .patterns-link {
+    margin-right: 20px;
+    font-size: .75em;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 768px) {
+  .inner-container {
+    width: 560px;
+  }
+
+  .header {
+    padding-bottom: 15px;
+    font-size: 2.5em;
+  }
+
+  .pattern {
+    float: left;
+    margin: 10px;
+    width: 166px;
+  }
+
+  .scopes-container {
+    padding: 20px;
+  }
+
+  .scope-container {
+    height: 520px;
+  }
+
+  .canvas {
+    width: 520px;
+    height: 520px;
+  }
+
+  .button-label {
+    margin-left: 40px;
+    font-size: 1.5em;
+  }
+
+  .patterns-link {
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 769px) {
+  .inner-container {
+    width: 660px;
+  }
+
+  .header {
+    padding-bottom: 15px;
+    font-size: 3em;
+  }
+
+  .pattern {
+    float: left;
+    margin: 10px;
+  }
+
+  .scopes-container {
+    padding: 20px 18px;
+  }
+
+  .scope-container {
+    height: 624px;
+  }
+
+  .button-label {
+    margin-left: 40px;
+    font-size: 1.5em;
+  }
+
+  .patterns-link {
+    margin-right: 40px;
+  }
+}

@@ -73,9 +73,9 @@ const newCell = (set) => {
 
 const ScopeButton = (props) => {
   return (
-    <button onClick={ () => props.changePattern(newCell(cells(props.pattern)).source) }>
-      move
-    </button>
+    <span onClick={() => props.changePattern(newCell(cells(props.pattern)).source)} className="button-label">
+      &#9881;
+    </span>
   );
 };
 

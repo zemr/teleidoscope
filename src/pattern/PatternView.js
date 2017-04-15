@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const PatternView = () => {
   return (
-    <div className="pattern-container">
+    <div className="patterns-container">
       <Link to="/scope/1">
         <img src={process.env.PUBLIC_URL + '/patterns/pattern_1.png'} alt="" className="pattern" />
       </Link>

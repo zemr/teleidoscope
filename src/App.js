@@ -1,12 +1,13 @@
 import React from 'react';
-import Sidebar from './Sidebar';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <Sidebar />
-        <div className="main-content">
+      <div className="outer-container">
+        <div className="inner-container">
+          <div className="header">
+            <span className="header-text">teleidoscope</span>
+          </div>
           {this.props.children}
         </div>
       </div>

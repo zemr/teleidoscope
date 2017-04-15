@@ -116,7 +116,7 @@ class Scope extends React.Component {
   drawLens() {
     const context = document.getElementById('canvasG').getContext('2d');
 
-    context.fillStyle = 'white';
+    context.fillStyle = '#404040';
     context.fillRect(0, 0, 5.2*radius, 3*height);
     context.globalCompositeOperation = "destination-out";
     context.arc(1.5*height, 1.5*height, 1.5*height, 0, 2*Math.PI);
@@ -125,9 +125,9 @@ class Scope extends React.Component {
 
   render() {
     return (
-      <div style={{position: 'relative'}}>
-        <canvas id="canvas" width={5.2*radius} height={3*height} style={{position: 'absolute'}} className={screen.height < 769 ? "canvas-scale" : null} />
-        <canvas id="canvasG" width={5.2*radius} height={3*height} style={{position: 'absolute'}} className={screen.height < 769 ? "canvas-scale" : null}/>
+      <div className="scope-container">
+        <canvas id="canvas" width={5.2*radius} height={3*height} className="canvas" />
+        <canvas id="canvasG" width={5.2*radius} height={3*height} className="canvas" />
       </div>
     );
   }
