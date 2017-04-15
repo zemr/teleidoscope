@@ -23,9 +23,9 @@ html, body {
 
 .header-text {
   padding-left: 15px;
-  background-color: #807477;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #938930), color-stop(.08, #938930), color-stop(.16, #b49131), color-stop(0.24, #ba852d), color-stop(0.40, #ac5d3e), color-stop(.50, #739131), color-stop(.56, #739131), color-stop(.64, #807477), color-stop(.8, #7c566a), color-stop(.88, #7c566a),color-stop(1, #b14040));
-  color: transparent;
+  color: #807477;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
