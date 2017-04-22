@@ -50,6 +50,17 @@ html, body {
   line-height: 2em;
 }
 
+.sources {
+  text-align: center;
+  color: #8d8d8d;
+  font-size: .5rem;
+}
+
+.sources a {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
 @media (max-width: 767px) {
   .inner-container {
     width: 240px;
@@ -66,7 +77,18 @@ html, body {
   }
 
   .pattern {
+    position: relative;
     margin-bottom: 5px;
+  }
+
+  .pattern-source {
+    position: absolute;
+    left: 88%;
+    top: 88%;
+    transform: rotate(270deg);
+    transform-origin: 0 50%;
+    color: #bebebe;
+    font-size: .5rem;
   }
 
   .scopes-container {
@@ -85,6 +107,10 @@ html, body {
     margin-right: 20px;
     font-size: .75em;
   }
+
+  .sources {
+    padding-bottom: 5px;
+  }
 }
 
 @media (min-width: 768px) and (max-height: 768px) {
@@ -98,9 +124,24 @@ html, body {
   }
 
   .pattern {
+    position: relative;
     float: left;
     margin: 10px;
+    height: 124px;
+  }
+
+  .pattern img {
     width: 166px;
+  }
+
+  .pattern-source {
+    position: absolute;
+    left: 96%;
+    top: 93%;
+    transform: rotate(270deg);
+    transform-origin: 0 50%;
+    color: #bebebe;
+    font-size: .5rem;
   }
 
   .scopes-container {
@@ -124,6 +165,10 @@ html, body {
   .patterns-link {
     margin-right: 40px;
   }
+
+  .sources {
+    padding: 10px;
+  }
 }
 
 @media (min-width: 768px) and (min-height: 769px) {
@@ -137,8 +182,20 @@ html, body {
   }
 
   .pattern {
+    position: relative;
+    height: 150px;
     float: left;
     margin: 10px;
+  }
+
+  .pattern-source {
+    position: absolute;
+    left: 96%;
+    top: 93%;
+    transform: rotate(270deg);
+    transform-origin: 0 50%;
+    color: #bebebe;
+    font-size: .6rem;
   }
 
   .scopes-container {
@@ -156,5 +213,9 @@ html, body {
 
   .patterns-link {
     margin-right: 40px;
+  }
+
+  .sources {
+    padding: 10px;
   }
 }
