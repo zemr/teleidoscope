@@ -43,11 +43,19 @@ html, body {
   cursor: pointer;
 }
 
+.button-label::selection {
+  background-color: #404040;
+}
+
 .patterns-link {
   float: right;
   text-decoration: none;
   color: #fff;
   line-height: 2em;
+}
+
+.patterns-link::selection {
+  background-color: #404040;
 }
 
 .sources {
